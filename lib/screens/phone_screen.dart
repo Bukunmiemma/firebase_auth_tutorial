@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth__tutorial/services/firebase_auth_methods.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_button.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
@@ -10,12 +12,17 @@ class PhoneScreen extends StatefulWidget {
 }
 
 class _PhoneScreenState extends State<PhoneScreen> {
-  final TextEditingController phonenumberController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
 
   @override
   void dispose() {
     super.dispose();
-    phonenumberController.dispose();
+    phoneController.dispose();
+  }
+
+  void phoneSignIn() {
+    FirebaseAuthMethods(FirebaseAuth.instance)
+        .phoneSignIn(context, phoneController.text);
   }
 
   @override
@@ -27,13 +34,13 @@ class _PhoneScreenState extends State<PhoneScreen> {
           children: [
             CustomTextField(
               obscureText: false,
-              controller: phonenumberController,
+              controller: phoneController,
               hintText: 'Enter phone number',
             ),
             const SizedBox(
               height: 5,
             ),
-            CustomButton(onTap: () {}, text: 'SEND OTP')
+            CustomButton(onTap: phoneSignIn, text: 'SEND OTP')
           ],
         ),
       ),

@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth__tutorial/services/firebase_auth_methods.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_button.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_text_field.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class LoginEmailPasswordScreen extends StatefulWidget {
