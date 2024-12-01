@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Firebase Auth  Tutorial</string>
+	<string>Firebase Auth Tutorial</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +20,24 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+    <array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>com.googleusercontent.apps.85060078792-sk07i5pd5p96vpua979u19v3qepho8bc</string>
+			<string>fb538480188998802</string>
+		</array>
+	</dict>
+    </array>
+	<key>FacebookAppId</key>
+	<S1tring>538480188998802</String>
+	<key>FacebookClientToken</key>
+	<String>c2aa1ef22239fa81b99dde097060bfaa</String>
+	<key>FacebookDisplayName</key>
+	<String>Firebase Auth Tutorial</String>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>

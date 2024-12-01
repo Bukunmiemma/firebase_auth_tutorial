@@ -3,8 +3,10 @@ import 'package:firebase_auth__tutorial/services/firebase_auth_methods.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_button.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class PhoneScreen extends StatefulWidget {
+  static String routeName = '/PhoneScreen';
   const PhoneScreen({super.key});
 
   @override
@@ -21,10 +23,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
   }
 
   void phoneSignIn() {
-    FirebaseAuthMethods(FirebaseAuth.instance)
+    context
+        .read<FirebaseAuthMethods>()
         .phoneSignIn(context, phoneController.text);
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

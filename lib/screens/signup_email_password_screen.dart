@@ -1,10 +1,11 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth__tutorial/services/firebase_auth_methods.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_button.dart';
 import 'package:firebase_auth__tutorial/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SignupEmailPasswordScreen extends StatefulWidget {
+  static String routeName = '/SignupEmailPasswordScreen';
   const SignupEmailPasswordScreen({super.key});
 
   @override
@@ -24,11 +25,11 @@ class _SignupEmailPasswordScreenState extends State<SignupEmailPasswordScreen> {
   }
 
   void signUpUser() async {
-    FirebaseAuthMethods(FirebaseAuth.instance).signUpWithEmail(
-      email: emailController.text,
-      password: passwordController.text,
-      context: context,
-    );
+    context.read<FirebaseAuthMethods>().signUpWithEmail(
+          email: emailController.text,
+          password: passwordController.text,
+          context: context,
+        );
   }
 
   @override

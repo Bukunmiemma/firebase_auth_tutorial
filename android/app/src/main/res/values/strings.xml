@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   
+   <string name="app_name">firebase auth tutorial</string>  
+   <string name="facebook_app_id">538480188998802</string>
+   <string name="fb_login_protocol_scheme">fb53848018899880</string>
+   <string name="facebook_client_token">c2aa1ef22239fa81b99dde097060bfaa</string>
+ </resources>
